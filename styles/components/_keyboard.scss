@@ -1,0 +1,80 @@
+.keyboard {
+    width: 75rem;
+    margin-top: 1rem;
+    padding: .6rem;
+    background-color: darken($color-secondary-key, 20%);
+    border: .3rem solid $color-primary-text;
+    border-radius: 1rem;
+    @include flex(space-between, center);
+    gap: 0.6rem;
+    flex-wrap: wrap;
+
+    &__key {
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        color: $color-primary-text;
+        background-color: $color-primary-key;
+        border-radius: .3rem;
+        cursor: pointer;
+        @extend %transition;
+        @include font(2rem, 4rem, 500);
+
+        &:hover {
+            background-color: darken($color-primary-key, 10%);
+        }
+
+        &.active {
+            background-color: $color-active-key;
+        }
+    }
+
+    .Backspace,
+    .CapsLock,
+    .Enter,
+    .ShiftRight,
+    .ShiftLeft {
+        width: 10.5rem;
+        color: $color-secondary-text;
+        background-color: $color-secondary-key;
+
+        &:hover {
+            background-color: lighten($color-secondary-key, 10%);
+        }
+
+        &.active {
+            background-color: $color-active-key;
+        }
+    }
+
+    .Tab,
+    .Delete,
+    .ControlLeft,
+    .ControlRight,
+    .AltLeft,
+    .AltRight,
+    .ArrowLeft,
+    .ArrowUp,
+    .ArrowDown,
+    .ArrowRight {
+        width: 5rem;
+        color: $color-secondary-text;
+        background-color: $color-secondary-key;
+
+        &:hover {
+            background-color: lighten($color-secondary-key, 10%);
+        }
+
+        &.active {
+            background-color: $color-active-key;
+        }
+    }
+
+    .Space {
+        width: 34rem;
+
+        &.active {
+            background-color: $color-active-key;
+        }
+    }
+}

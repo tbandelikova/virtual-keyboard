@@ -1,0 +1,9 @@
+.screen {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    color: $color-primary-text;
+    background-color: $color-screen;
+    overflow: auto;
+    @include font(2rem, 3rem, 500);
+}
