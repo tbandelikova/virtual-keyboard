@@ -44,6 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .header {
@@ -163,6 +164,7 @@ body {
 
 .screen {
   width: 100%;
+  min-width: 75rem;
   height: 20rem;
   padding: 1rem;
   color: #1c2833;
