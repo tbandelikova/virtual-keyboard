@@ -1,0 +1,10 @@
+.container {
+    max-width: $content-width;
+    padding: 0 2rem;
+}
+
+.main__container {
+    @include flex(center, center);
+    flex-direction: column;
+    margin: 0 auto;
+}

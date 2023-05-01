@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+.keyboard__key {
+  transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #1c2833;
+}
+
+.main,
+.header {
+  padding: 2rem 0;
+}
+
+.hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 2rem;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5019607843);
+}
+.header__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #3596b5;
+}
+
+.keyboard {
+  width: 75rem;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background-color: #533387;
+  border: 0.3rem solid #1c2833;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.keyboard__key {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  color: #1c2833;
+  background-color: #c493ff;
+  border-radius: 0.3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+.keyboard__key:hover {
+  background-color: #a860ff;
+}
+.keyboard__key.active {
+  background-color: #3596b5;
+  transform: scale(0.9);
+}
+.keyboard .Backspace,
+.keyboard .CapsLock,
+.keyboard .Enter,
+.keyboard .ShiftRight,
+.keyboard .ShiftLeft {
+  width: 10.5rem;
+  color: #eeeeee;
+  background-color: #845ec2;
+}
+.keyboard .Backspace:hover,
+.keyboard .CapsLock:hover,
+.keyboard .Enter:hover,
+.keyboard .ShiftRight:hover,
+.keyboard .ShiftLeft:hover {
+  background-color: #a083d0;
+}
+.keyboard .Backspace.active,
+.keyboard .CapsLock.active,
+.keyboard .Enter.active,
+.keyboard .ShiftRight.active,
+.keyboard .ShiftLeft.active {
+  background-color: #3596b5;
+}
+.keyboard .Tab,
+.keyboard .Delete,
+.keyboard .ControlLeft,
+.keyboard .ControlRight,
+.keyboard .AltLeft,
+.keyboard .AltRight,
+.keyboard .ArrowLeft,
+.keyboard .ArrowUp,
+.keyboard .ArrowDown,
+.keyboard .ArrowRight {
+  width: 5rem;
+  color: #eeeeee;
+  background-color: #845ec2;
+}
+.keyboard .Tab:hover,
+.keyboard .Delete:hover,
+.keyboard .ControlLeft:hover,
+.keyboard .ControlRight:hover,
+.keyboard .AltLeft:hover,
+.keyboard .AltRight:hover,
+.keyboard .ArrowLeft:hover,
+.keyboard .ArrowUp:hover,
+.keyboard .ArrowDown:hover,
+.keyboard .ArrowRight:hover {
+  background-color: #a083d0;
+}
+.keyboard .Tab.active,
+.keyboard .Delete.active,
+.keyboard .ControlLeft.active,
+.keyboard .ControlRight.active,
+.keyboard .AltLeft.active,
+.keyboard .AltRight.active,
+.keyboard .ArrowLeft.active,
+.keyboard .ArrowUp.active,
+.keyboard .ArrowDown.active,
+.keyboard .ArrowRight.active {
+  background-color: #3596b5;
+}
+.keyboard .Space {
+  width: 34rem;
+}
+.keyboard .Space.active {
+  background-color: #3596b5;
+}
+
+.screen {
+  width: 100%;
+  min-width: 75rem;
+  height: 20rem;
+  padding: 1rem;
+  color: #1c2833;
+  background-color: #fdf7ff;
+  overflow: auto;
+  cursor: default;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.screen:focus {
+  outline: none;
+}/*# sourceMappingURL=main.css.map */

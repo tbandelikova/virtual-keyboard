@@ -1,0 +1,29 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "- design is at your discretion.\r - `index.html` file should be empty (all the necessary elements are generated with the usage of JS)\r - pressing a key on a physical keyboard highlights the key on the virtual keyboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbandelikova/virtual-keyboard.git"
+  },
+  "keywords": [
+    "keyboard"
+  ],
+  "author": "tbandelikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbandelikova/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/tbandelikova/virtual-keyboard#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
