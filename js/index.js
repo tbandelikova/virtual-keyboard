@@ -88,7 +88,7 @@ const initApp = () => {
                         isCaps ? changeVisualKey('caps') : changeVisualKey('caseDown');
                     }
                 }
-            }, 300);
+            }, 200);
         }
     });
 
