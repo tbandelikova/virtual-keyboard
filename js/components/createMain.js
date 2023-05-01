@@ -2,7 +2,7 @@ import { createElement } from '../common/createElement.js';
 import { keyClasses } from '../common/classes.js';
 import { createKey } from './createKey.js';
 
-export const createMain = (parent) => {
+export const createMain = (lang, parent) => {
     const main = createElement('main', {
         className: 'main'
     });
@@ -22,7 +22,7 @@ export const createMain = (parent) => {
         className: 'keyboard'
     });
     keyClasses.CODE.map((el, i) => {
-        createKey(el, i, keyboard);
+        createKey(lang, el, i, keyboard);
     })
 
     container.append(screen, keyboard);

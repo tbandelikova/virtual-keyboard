@@ -1,7 +1,7 @@
 import { createElement } from "../common/createElement.js";
 import { keyClasses, en, by } from "../common/classes.js";
 
-export const createKey = (code, index, parent) => {
+export const createKey = (lang, code, index, parent) => {
     const key = createElement('div', {
         className: `keyboard__key key ${code}`
     });
@@ -15,11 +15,11 @@ export const createKey = (code, index, parent) => {
 
     keyClasses.STATE.map((state, i) => {
         langEn.append(createElement('span', {
-            className: i == 0? state : `${state} hidden`,
+            className: (i == 0 && lang == 'en') ? state : `${state} hidden`,
             textContent: en[state][index]
         }));
         langBy.append(createElement('span', {
-            className: `${state} hidden`,
+            className: (i == 0 && lang == 'by') ? state : `${state} hidden`,
             textContent: by[state][index]
         }));
     });

@@ -8,16 +8,15 @@ window.onload = () => {
 
 const initApp = () => {
     const body = document.body;
-    createHeader(body);
-    const main = createMain(body);
-
-    const keys = Array.from(main.keyboard.children);
-    const caps = keys.find(el => el.classList.contains('CapsLock'));
-
     const langKeyCodes = ['ControlLeft', 'AltLeft'];
     const languages = ['en', 'by'];
-    let currentLang = languages[0];
+    let currentLang = localStorage.getItem("keyboardLang") ? localStorage.getItem("keyboardLang") : languages[0];
     let pressed = new Set();
+
+    createHeader(body);
+    const main = createMain(currentLang, body);
+    const keys = Array.from(main.keyboard.children);
+    const caps = keys.find(el => el.classList.contains('CapsLock'));
 
     document.addEventListener('keydown', (e) => {
         if (keyClasses.CODE.includes(e.code)) {
@@ -80,7 +79,7 @@ const initApp = () => {
                 caps.classList.toggle('active');
 
                 const isCaps = caps.classList.contains('active');
-                isCaps? changeVisualKey('caps') : changeVisualKey('caseDown');
+                isCaps ? changeVisualKey('caps') : changeVisualKey('caseDown');
             }
                 break;
             case 'ShiftLeft':
@@ -118,6 +117,7 @@ const initApp = () => {
 
     const changeLang = () => {
         currentLang = (currentLang == languages[0]) ? languages[1] : languages[0];
+        localStorage.setItem("keyboardLang", currentLang); //Set to LocalStorage
         let prevLang = (currentLang == languages[0]) ? languages[1] : languages[0];
 
         keys.map(key => {
