@@ -93,6 +93,7 @@ body {
 }
 .keyboard__key.active {
   background-color: #3596b5;
+  transform: scale(0.9);
 }
 .keyboard .Backspace,
 .keyboard .CapsLock,

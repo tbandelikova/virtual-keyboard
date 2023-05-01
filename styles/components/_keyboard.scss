@@ -26,6 +26,7 @@
 
         &.active {
             background-color: $color-active-key;
+            transform: scale(0.9);
         }
     }
 

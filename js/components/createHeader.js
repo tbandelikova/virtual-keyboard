@@ -15,8 +15,12 @@ export const createHeader = (parent) => {
         className: 'header__description',
         textContent: 'Virtual keyboard was created in Windows'
     });
+    const shortcut = createElement('p', {
+        className: 'header__shortcut',
+        textContent: 'Press "ControlLeft" + "AltLeft" to switch language'
+    });
 
-    container.append(title, description);
+    container.append(title, description, shortcut);
     header.append(container);
     parent.append(header);
 }
