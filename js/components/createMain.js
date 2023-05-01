@@ -16,7 +16,7 @@ export const createMain = (lang, parent) => {
         rows: 5,
         cols: 50
     });
-    screen.setAttribute("readonly", "readonly");
+    screen.setAttribute('readonly', 'readonly');
 
     //Keyboard
     const keyboard = createElement('div', {
@@ -24,11 +24,11 @@ export const createMain = (lang, parent) => {
     });
     keyClasses.CODE.map((el, i) => {
         createKey(lang, el, i, keyboard);
-    })
+    });
 
     container.append(screen, keyboard);
     main.append(container);
     parent.append(main);
 
-    return { screen, keyboard }
-}
+    return { screen, keyboard };
+};

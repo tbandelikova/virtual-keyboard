@@ -23,4 +23,4 @@ export const createHeader = (parent) => {
     container.append(title, description, shortcut);
     header.append(container);
     parent.append(header);
-}
+};

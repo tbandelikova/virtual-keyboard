@@ -1,5 +1,5 @@
-import { createElement } from "../common/createElement.js";
-import { keyClasses, en, by } from "../common/classes.js";
+import { createElement } from '../common/createElement.js';
+import { keyClasses, en, by } from '../common/classes.js';
 
 export const createKey = (lang, code, index, parent) => {
     const key = createElement('div', {
@@ -26,4 +26,4 @@ export const createKey = (lang, code, index, parent) => {
     key.append(langEn, langBy);
 
     parent.append(key);
-}
+};

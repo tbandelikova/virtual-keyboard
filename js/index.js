@@ -1,16 +1,16 @@
-import { createHeader } from "./components/createHeader.js";
-import { createMain } from "./components/createMain.js";
-import { keyClasses } from "./common/classes.js";
+import { createHeader } from './components/createHeader.js';
+import { createMain } from './components/createMain.js';
+import { keyClasses } from './common/classes.js';
 
 window.onload = () => {
     initApp();
-}
+};
 
 const initApp = () => {
     const body = document.body;
     const langKeyCodes = ['ControlLeft', 'AltLeft'];
     const languages = ['en', 'by'];
-    let currentLang = localStorage.getItem("keyboardLang") ? localStorage.getItem("keyboardLang") : languages[0];
+    let currentLang = localStorage.getItem('keyboardLang') ? localStorage.getItem('keyboardLang') : languages[0];
     let pressed = new Set();
 
     createHeader(body);
@@ -90,7 +90,7 @@ const initApp = () => {
                 }
             }, 300);
         }
-    })
+    });
 
     //Helper functions
     const specialAction = (e, code) => {
@@ -101,7 +101,7 @@ const initApp = () => {
                 break;
             case 'Tab': {
                 e.preventDefault();
-                screen.value += '  '
+                screen.value += '  ';
             }
                 break;
             case 'Delete': screen.value = screen.value.slice(0, screen.selectionStart) + screen.value.slice(screen.selectionEnd);
@@ -130,7 +130,7 @@ const initApp = () => {
             case 'ArrowRight': screen.value += '▷';
                 break;
         }
-    }
+    };
 
     const changeVisualKey = (spanClass) => {
         keys.map(key => {
@@ -138,17 +138,17 @@ const initApp = () => {
             Array.from(currentSet).map(span => span.classList.contains(spanClass) ?
                 span.classList.remove('hidden') : span.classList.add('hidden'));
         });
-    }
+    };
 
     const changeSymbol = (key) => {
         const langSpan = key.find(el => el.classList.contains(`${currentLang}`));
         const visualKey = Array.from(langSpan.children).find(span => !span.classList.contains('hidden'));
         return visualKey.textContent;
-    }
+    };
 
     const changeLang = () => {
         currentLang = (currentLang == languages[0]) ? languages[1] : languages[0];
-        localStorage.setItem("keyboardLang", currentLang); //Set to LocalStorage
+        localStorage.setItem('keyboardLang', currentLang); //Set to LocalStorage
         let prevLang = (currentLang == languages[0]) ? languages[1] : languages[0];
 
         keys.map(key => {
@@ -159,6 +159,6 @@ const initApp = () => {
             Array.from(currentSet).map((span, i) => {
                 if (i == 0) span.classList.remove('hidden');
             });
-        })
-    }
+        });
+    };
 };
