@@ -6,5 +6,10 @@
     color: $color-primary-text;
     background-color: $color-screen;
     overflow: auto;
+    cursor: default;
     @include font(2rem, 3rem, 500);
+
+    &:focus {
+        outline: none;
+    }
 }

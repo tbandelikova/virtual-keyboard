@@ -16,6 +16,7 @@ export const createMain = (lang, parent) => {
         rows: 5,
         cols: 50
     });
+    screen.setAttribute("readonly", "readonly");
 
     //Keyboard
     const keyboard = createElement('div', {

@@ -171,8 +171,12 @@ body {
   color: #1c2833;
   background-color: #fdf7ff;
   overflow: auto;
+  cursor: default;
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
   line-height: 3rem;
+}
+.screen:focus {
+  outline: none;
 }/*# sourceMappingURL=main.css.map */
