@@ -16,6 +16,7 @@
         color: $color-primary-text;
         background-color: $color-primary-key;
         border-radius: .3rem;
+        user-select: none;
         cursor: pointer;
         @extend %transition;
         @include font(2rem, 4rem, 500);

@@ -82,6 +82,9 @@ body {
   color: #1c2833;
   background-color: #c493ff;
   border-radius: 0.3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
   font-style: normal;
   font-weight: 500;

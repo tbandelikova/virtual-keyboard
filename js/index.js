@@ -18,6 +18,7 @@ const initApp = () => {
     const keys = Array.from(main.keyboard.children);
     const caps = keys.find(el => el.classList.contains('CapsLock'));
 
+    //Add EventListeners
     document.addEventListener('keydown', (e) => {
         if (keyClasses.CODE.includes(e.code)) {
             const pressedKey = keys.find(el => el.classList.contains(e.code));
@@ -62,6 +63,36 @@ const initApp = () => {
         }
     });
 
+    main.keyboard.addEventListener('click', (e) => {
+        const key = e.target.closest('div').classList.contains('key') ? e.target.closest('div') : null;
+        if (key) {
+            const keyCode = keyClasses.CODE.find(code => key.classList.contains(code));
+            const isSpecial = keyClasses.SPECIAL.includes(keyCode);
+            const symbol = !isSpecial && changeSymbol(Array.from(key.children));
+
+            if (keyCode != 'CapsLock') {
+                key.classList.add('active');
+            }
+
+            if (!isSpecial) {
+                main.screen.value += symbol;
+            } else {
+                specialAction(e, keyCode);
+            }
+
+            setTimeout(() => {
+                if (keyCode != 'CapsLock') {
+                    key.classList.remove('active');
+                    if (keyCode == 'ShiftLeft' || keyCode == 'ShiftRight') {
+                        const isCaps = caps.classList.contains('active');
+                        isCaps ? changeVisualKey('caps') : changeVisualKey('caseDown');
+                    }
+                }
+            }, 300);
+        }
+    })
+
+    //Helper functions
     const specialAction = (e, code) => {
         const screen = main.screen;
 
@@ -131,4 +162,3 @@ const initApp = () => {
         })
     }
 };
-
